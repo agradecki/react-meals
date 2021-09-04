@@ -4,14 +4,14 @@ import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
 
 const API =
-  "https://react-course-https-default-rtdb.europe-west1.firebasedatabase.app/meals";
+  "https://react-course-https-default-rtdb.europe-west1.firebasedatabase.app/meals.json";
 
 const AvailableMeals = () => {
   const [meals, setMeals] = useState([]);
 
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch(API, {});
+      const response = await fetch(API);
       const responseData = await response.json();
 
       const loadedMeals = [];
